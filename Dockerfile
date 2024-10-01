@@ -6,5 +6,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install -y \
     net-tools \
     nano
+
+# Загрузим с репозитория последнюю версию исходников робота
+RUN git clone https://github.com/providethemselfs/Containers.git
+
 # Зададим стартовую команду для контейнера
 CMD ["bash"]
